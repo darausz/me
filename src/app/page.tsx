@@ -1,49 +1,38 @@
+// "use client"
 import Image from "next/image";
 import styles from "./page.module.css";
+import Navbar from "@/components/Navbar";
+// import { useEffect, useRef } from "react";
 
 export default function Home() {
+  // const about = useRef(null)
+  // useEffect(() => {
+    // const aboutStyles = about.current.style;
+    // console.log(aboutStyles)
+    // aboutStyles.animation = "slideIn 1.5s forwards";
+    // console.log(about.style)
+    // about.style.animation = "animation: slideIn 1.5s forwards";
+  // }, [])
   return (
     <div className={styles.page}>
+      <Navbar />
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className={styles.home} id="Home">
+          <div>
             <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              aria-hidden
+              src="https://nextjs.org/icons/file.svg"
+              alt="File icon"
+              width={160}
+              height={160}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className={styles.about} /*ref={about}*/>
+            <p>Hi, I'm </p>
+            <p>Daraus Zhang</p>
+            <p>Full Stack Developer</p>
+            <p>Welcome to my page</p>
+          </div>
         </div>
       </main>
       <footer className={styles.footer}>
@@ -52,42 +41,42 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
+          {/* <Image
             aria-hidden
             src="https://nextjs.org/icons/file.svg"
             alt="File icon"
             width={16}
             height={16}
-          />
-          Learn
+          /> */}
+          Home
         </a>
         <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
+          {/* <Image
             aria-hidden
             src="https://nextjs.org/icons/window.svg"
             alt="Window icon"
             width={16}
             height={16}
-          />
-          Examples
+          /> */}
+          Projects
         </a>
         <a
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
+          {/* <Image
             aria-hidden
             src="https://nextjs.org/icons/globe.svg"
             alt="Globe icon"
             width={16}
             height={16}
-          />
-          Go to nextjs.org →
+          /> */}
+          Contact
         </a>
       </footer>
     </div>
