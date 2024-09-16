@@ -1,7 +1,10 @@
 export default function Navbar() {
   return(
     <header>
-      Navbar
+      <div>Home</div>
+      <div>
+        <a href="Home">Projects</a>
+      </div>
     </header>
   )
 }

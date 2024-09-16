@@ -9,15 +9,16 @@
 }
 
 
-.home {
+.intro {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 5rem;
 }
 
 .about {
   color:black;
-  flex: 1;
   font-size: 2rem;
   position: relative;
   will-change: transform;
@@ -33,4 +34,15 @@
     transform: translateX(0);
     color:black;
   }
+}
+
+.skills {
+  display: flex;
+  gap:1rem;
+  justify-content: center;
+}
+
+.preview {
+  width:20rem;
+
 }
