@@ -1,53 +1,30 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import vite from "./assets/react.svg"
+import Switch from './components/Switch'
+import Contact from './components/Contact'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [panel, setPanel] = useState(0)
+  const [view, setView] = useState("top")
 
   return (
     <>
-      <Navbar />
-      <div className="main">
-        <div className="home" id="Home">
-          <div className='intro'>
-            <div>
-              <img
-                aria-hidden
-                src="https://nextjs.org/icons/file.svg"
-                alt="File icon"
-                width={160}
-                height={160}
-              />
-            </div>
-            <div className="about">
-              <p>Daraus Zhang</p>
-              <p>Full Stack Developer</p>
-              <p>Welcome to my page</p>
-            </div>
-          </div>
-        </div>
-        <div className='skills'>
-          <img src={vite} className='h-20'></img>
-          <img src={vite} className='h-20'></img>
-          <img src={vite} className='h-20'></img>
-          <img src={vite} className='h-20'></img>
-          <img src={vite} className='h-20'></img>
-        </div>
-        <div id="Projects">
-          <div className='project'>
-            <a href='https://darausz.github.io/valorant-wiki/'>
-            <div>
-              <img className="preview" src='https://repository-images.githubusercontent.com/858335329/e1480ce8-9374-4b6c-9546-95a7319d9ebe'></img>
-              Valorant Wiki
-            </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <Footer />
+      {view === "top" ?
+        <>
+          <button className=' bg-slate-400 absolute left-0 top-1/2 h-16 w-16' onClick={() => { setPanel((panel) => panel - 1) }}>Left</button>
+          <Switch panel={panel} />
+          <button className=' bg-slate-400 absolute right-0 top-1/2 h-16 w-16' onClick={() => { setPanel((panel) => panel + 1) }}>Right</button>
+          <button className=' bg-slate-400 absolute left-1/2 bottom-0 h-16 w-16' onClick={() => { setView("bottom") }}>Bottom</button>
+        </>
+        :
+        <>
+          <Contact />
+          <button className=' bg-slate-400 absolute left-1/2 top-0 h-16 w-16' onClick={() => { setView("top") }}>top</button>
+        </>
+      }
+
+
     </>
   )
 }
