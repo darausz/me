@@ -17,6 +17,11 @@
   padding: 5rem;
 }
 
+.shelf {
+  width: 20rem;
+  height: 3rem;
+}
+
 .about {
   color: black;
   font-size: 2rem;
