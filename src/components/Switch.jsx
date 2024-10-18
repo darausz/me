@@ -1,11 +1,8 @@
 import Home from "./Home"
 import Projects from "./Projects";
 
-interface Props {
-  panel: number
-}
-export default function Switch({panel}: Props) {
-  function mod(n: number, m: number) {
+export default function Switch({panel}) {
+  function mod(n, m) {
     return((n % m) + m) % m;
   }
 

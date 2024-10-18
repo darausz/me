@@ -1,14 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Room from './components/Room.tsx'
-import Projects from './components/Projects.tsx'
-import Skills from './components/Skills.tsx'
-import Test from "./components/Test.tsx"
+import Room from './components/Room.jsx'
+import Projects from './components/Projects.jsx'
+import Skills from './components/Skills.jsx'
+import Test from "./components/Test.jsx"
 import './index.css'
 import './App.css'
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>

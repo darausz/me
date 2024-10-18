@@ -6,7 +6,7 @@ export default function Card({ project }) {
   const [front, setFront] = useState("front")
   const [back, setBack] = useState("facedown")
 
-  function timeout(delay: number) {
+  function timeout(delay) {
     return new Promise(res => setTimeout(res, delay));
   }
 
@@ -18,10 +18,10 @@ export default function Card({ project }) {
 
   return (
     hover ?
-      <div className={`project ${front} bg-white`} onMouseLeave={() => setFront("faceup")}>
+      <div className={`project ${front} bg-purple-300`} onMouseLeave={() => setFront("faceup")}>
         <a href={project.link} target="_blank">
           <div>
-            <img className="preview" src={project.img}></img>
+            <img className="preview h-40 object-cover" src={project.img}></img>
             {project.name}
           </div>
           <div className="project-description">
@@ -31,7 +31,7 @@ export default function Card({ project }) {
       </div>
       :
       <div className={`project ${back} bg-red-300`} onMouseEnter={() => { swap() }}>
-        back
+        {project.back}
       </div>
   )
 }
