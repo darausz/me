@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 #root {
-  max-width: 100VW;
   margin: 0 auto;
   padding: 2rem;
+  height: 100vh;
 }
 
 
@@ -22,6 +22,11 @@
   height: 3rem;
 }
 
+.setup {
+  width:40rem;
+  cursor: pointer;
+}
+
 .about {
   color: black;
   font-size: 2rem;
@@ -30,6 +35,15 @@
   animation: 1.5s 0s 1 slideIn;
 }
 
+.monitor {
+  background-image: url("/Screen.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 50rem;
+  width: 90rem;
+  
+}
 @keyframes slideIn {
   0% {
     transform: translateX(100%);
@@ -69,7 +83,7 @@
   text-align: left;
 }
 
-.front {
+/* .front {
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -77,16 +91,20 @@
 
 .back {
   opacity: 100%;
-}
+} */
 
-.project:hover {
-  animation: flipOver 2s forwards;
-  .back {
+.back {
+  animation: flipUp 1s forwards;
+  /* .back {
     animation: 2s flipDown 0s forwards;
   }
   .front {
     animation: 1s flipUp .6s forwards;
-  }
+  } */
+}
+
+.front{
+  animation: flipOver 1s forwards;
 }
 
 @keyframes flipDown {
@@ -98,7 +116,7 @@
   }
 }
 
-@keyframes flipUp {
+/* @keyframes flipUp {
   0% {
     transform: rotateY(270deg);
   }
@@ -112,11 +130,23 @@
     opacity: 1;
     height: auto;
   }
+} */
+
+@keyframes flipUp {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
 }
 
 @keyframes flipOver {
   0% {
     transform: rotateY(180deg);
+  }
+  1% {
+    transform: rotateY(90deg);
   }
   100% {
     transform: rotateY(0deg);
