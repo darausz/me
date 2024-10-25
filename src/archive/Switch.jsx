@@ -1,5 +1,5 @@
 import Home from "./Home"
-import Projects from "./Projects";
+import Projects from "../components/Projects";
 
 export default function Switch({panel}) {
   function mod(n, m) {

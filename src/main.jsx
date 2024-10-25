@@ -5,6 +5,7 @@ import Room from './components/Room.jsx'
 import Projects from './components/Projects.jsx'
 import Skills from './components/Skills.jsx'
 import Test from "./components/Test.jsx"
+import Bookshelf from './components/Bookshelf.jsx'
 import './index.css'
 import './App.css'
 
@@ -15,7 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Room />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/test" element={<Bookshelf />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
