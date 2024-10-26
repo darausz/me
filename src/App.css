@@ -25,12 +25,6 @@
   height: 3rem;
 }
 
-/* .background {
-  background-image: url("./shelfBack.png");
-  background-image: url("./Top.png"); 
-  background-size: contain;
-} */
-
 .shelf {
   /* background-image: url("./Shelf.png");
   overflow: hidden;
@@ -44,32 +38,71 @@
 .bookshelf {
   display: flex;
   overflow: hidden;
+  flex-direction: column;
+}
+
+.bookshelfTop {
+  display: flex;
+}
+
+.bookshelfCover {
+  flex-grow: 1;
+  background-image: url("./bookshelfTop.png");
+}
+
+.bookshelfCorner {
+  z-index: 1;
+  max-width: 20%;
 }
 
 .bookshelfFront {
+  display: flex;
+}
+
+.bookshelfContents {
   scroll-snap-type: y mandatory;
   max-height: 100vh;
   overflow-y: scroll;
+}
+
+.bookshelfRows {
   flex-grow: 1;
+}
+
+.sekiro {
+  left: 60%;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
+  /* make scrollbar transparent */
 }
 
 .bookshelfSide {
+  position: absolute;
+  right: 0;
+  top: 0;
   overflow: hidden;
   height: 100VH;
+  max-width: 20%;
 }
 
 .row {
+  display: flex;
   scroll-snap-align: center;
+}
+
+.bookshelfSegment {
+  flex-grow: 1;
+  background-image: url("./bookshelfSegment.png");
+  background-repeat: no-repeat;
 }
 
 .none {
   display: none;
 }
+
 .books {
   position: fixed;
   z-index: 2;
@@ -91,6 +124,11 @@
   animation: 1.5s 0s 1 slideIn;
 }
 
+.highlight:hover {
+  -webkit-filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+}
+
 .monitor {
   background-image: url("/Screen.png");
   background-repeat: no-repeat;
@@ -100,6 +138,10 @@
   width: 90rem;
   /* filter: brightness(100%); */
   box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .3);
+}
+
+.backArrow {
+  z-index: 10;
 }
 
 .backArrow:hover {
@@ -149,7 +191,7 @@
 .project-name {
   margin: 1.5em auto 0 auto;
   font-size: 1.5rem;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
 
@@ -202,6 +244,12 @@
   /* animation: flipOver .5s forwards; */
 }
 
+.cfFront {
+  background-image: url("./CF Front.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .flipped {
   transform: rotate(180deg);
 }
@@ -228,11 +276,12 @@
 
 @keyframes floatIn {
   0% {
-    transform:translateY(-5rem);
+    transform: translateY(-5rem);
     filter: opacity(0%);
   }
+
   100% {
-    transform:translateY(0px);
+    transform: translateY(0px);
     filter: opacity(100%);
   }
 }

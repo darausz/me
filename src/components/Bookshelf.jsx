@@ -4,6 +4,11 @@ import Back from "./Back.jsx"
 import bookshelfTop from "../assets/bookshelfTop.png"
 import bookshelfSide from "../assets/bookshelfSide.png"
 import bookshelfCorner from "../assets/bookshelfCorner.png"
+import bookshelfLeft from "../assets/bookshelfLeft.png"
+import bookshelfRow from "../assets/bookshelfRow.png"
+import sanderson from "../assets/sanderson.png"
+import sekiro from "../assets/sekiro.png"
+import skills from "../assets/skills.png"
 
 export default function Bookshelf() {
   const[hidden, setHidden] = ("")
@@ -29,30 +34,48 @@ export default function Bookshelf() {
     //     change("")
     //   }
     // })
-    function isOverflown() {
-      let element = document.getElementById('0')
-      console.log(element.scrollHeight, element.clientHeight)
-    }
+    // function isOverflown() {
+    //   let element = document.getElementById('0')
+    //   console.log(element.scrollHeight, element.clientHeight)
+    // }
     
-    document.getElementById('0').addEventListener("scroll", isOverflown)
+    // document.getElementById('0').addEventListener("scroll", isOverflown)
+    document.getElementById('0').scrollIntoView()
   }, [])
 
   return (
     <div>
       <Back navigate={"/"}/>
-      <div className="bookshelf">
-        <div id="0"className="bookshelfFront">
-          <div className="bookshelfTop row">
-            <img src={bookshelfTop}></img>
+      <div id="0" className="bookshelf bookshelfContents">
+        <div className="row bookshelfTop">
+          <img src={bookshelfLeft}></img>
+          <div className="bookshelfCover" >
           </div>
-          <section className="row w-full h-screen bg-green-300">shelf 1</section>
-          <section className="row w-full h-screen bg-green-400">shelf 2</section>
-          <section className="row w-full h-screen bg-green-500">shelf 3</section>
+          <img className="bookshelfCorner" src={bookshelfCorner}></img>
         </div>
-        <div className="bookshelfSide">
-          <img src={bookshelfCorner} className={`${hidden == "" ? "none" : null}`} ></img>
-          <img src={bookshelfSide}></img>
+        <div id="0" className="bookshelfFront">
+          <div className="bookshelfRows">
+            <section className="row relative">
+              <img src={bookshelfRow}></img>
+              <img src={sanderson} className="absolute left-20 bottom-20"></img>
+              <img src={sekiro} className="absolute sekiro bottom-20"></img>
+              <div className="bookshelfSegment"></div>
+            </section>
+            <section className="row relative">
+              <img src={bookshelfRow}></img>
+              <img src={skills} className="absolute left-20 bottom-20"></img>
+              <div className="bookshelfSegment"></div>
+            </section>
+            <section className="row ">
+              <img src={bookshelfRow}></img>
+              <div className="bookshelfSegment">SHELF 3</div>
+            </section>
+            {/* <section className="row w-full h-screen bg-green-400">shelf 2</section>
+            <section className="row w-full h-screen bg-green-500">shelf 3</section> */}
+          </div>
+          <div className="bookshelfSide"><img src={bookshelfSide}></img></div>
         </div>
+        
       </div>
     </div>
 

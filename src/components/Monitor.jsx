@@ -32,6 +32,8 @@ export default function Monitor() {
             desc: "Website allowing users to find composting solutions in their area developed with React and Supabase utilizing Leaflet for displaying location-based information on a map",
             additional: "*Currently works with New York City, Boston, Chicago, Pittsburgh, Jacksonville, Seattle, and Omaha"
           }}
+          front={"cfFront"}
+          back={"cfFront"}
         />
         <Card project={
           {
@@ -47,7 +49,7 @@ export default function Monitor() {
       </div>
       :
       <div className="monitor flex flex-wrap m-auto text-center justify-center bg-black gap-8">
-        <div className="w-3/4 h-16 bg-white mt-12" style={{ cursor: 'pointer' }} onClick={() => setRevealed(true)}>
+        <div className="highlight w-3/4 h-16 bg-white mt-12" style={{ cursor: 'pointer' }} onClick={() => setRevealed(true)}>
           Reveal the Cards
         </div>
       </div>

@@ -37,7 +37,7 @@ export default function Card({ project, front, back }) {
           <div className="project-name">{project.name}</div>
           <img className="preview h-40 object-cover" src={project.img}></img>
         </div>
-        <div className="project-description">
+        <div className="project-description text-black">
           {project.desc.split("<br/>").join("\n")}
           {project.additional ? <div className="text-sm"><br />{project.additional}</div> : null}
         </div>
