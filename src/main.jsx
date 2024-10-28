@@ -10,7 +10,7 @@ import './App.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/personal-website'>
       <Routes>
         <Route path="/" element={<Room />} />
         <Route path="/projects" element={<Projects />} />
