@@ -10,7 +10,7 @@ export default function Monitor() {
     revealed ?
       <div className="monitor flex flex-wrap m-auto text-center justify-center bg-black gap-8">
         {/* <div className="w-3/4 bg-white mt-12" ></div> */}
-        <h1 className="w-full pt-8">Projects</h1>
+        <h1 className="w-full pt-8"></h1>
         <Card project={
           {
             back: "Valorant Logo",

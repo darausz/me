@@ -47,7 +47,7 @@
 
 .bookshelfCover {
   flex-grow: 1;
-  background-image: url("./bookshelfTop.png");
+  background-image: url("/bookshelfTop.png");
 }
 
 .bookshelfCorner {
@@ -95,7 +95,7 @@
 
 .bookshelfSegment {
   flex-grow: 1;
-  background-image: url("./bookshelfSegment.png");
+  background-image: url("/bookshelfSegment.png");
   background-repeat: no-repeat;
 }
 
@@ -225,27 +225,27 @@
 }
 
 .valoBack {
-  background-image: url("./Valorant Back.png");
+  background-image: url("/Valorant Back.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .valoFront {
-  background-image: url("./Valorant Front.png");
+  background-image: url("/Valorant Front.png");
   background-repeat: no-repeat;
   background-size: contain;
   /* animation: flipOver .5s forwards; */
 }
 
 .ctgFront {
-  background-image: url("./CTG Front.png");
+  background-image: url("/CTG Front.png");
   background-repeat: no-repeat;
   background-size: contain;
   /* animation: flipOver .5s forwards; */
 }
 
 .cfFront {
-  background-image: url("./CF Front.png");
+  background-image: url("/CF Front.png");
   background-repeat: no-repeat;
   background-size: contain;
 }

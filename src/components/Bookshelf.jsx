@@ -69,7 +69,7 @@ export default function Bookshelf() {
             </section>
             <section className="row ">
               <img src={bookshelfRow}></img>
-              <div className="bookshelfSegment">SHELF 3</div>
+              <div className="bookshelfSegment"></div>
             </section>
             {/* <section className="row w-full h-screen bg-green-400">shelf 2</section>
             <section className="row w-full h-screen bg-green-500">shelf 3</section> */}
