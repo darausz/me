@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ctgcompostpreview from "../assets/CTGCompostFinderPreview.jpg"
 import ctgshopifypreview from "../assets/CTGShopifyPreview.jpg"
+import cards from "../assets/cards.png"
 import Card from "./Card"
 
 export default function Monitor() {
@@ -49,8 +50,8 @@ export default function Monitor() {
       </div>
       :
       <div className="monitor flex flex-wrap m-auto text-center justify-center bg-black gap-8">
-        <div className="highlight w-3/4 h-16 bg-white mt-12" style={{ cursor: 'pointer' }} onClick={() => setRevealed(true)}>
-          Reveal the Cards
+        <div className="highlight mx-auto pt-6" style={{ cursor: 'pointer' }} onClick={() => setRevealed(true)}>
+          <img src={cards}></img>
         </div>
       </div>
   )
