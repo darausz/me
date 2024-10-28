@@ -1,2 +1,2 @@
-#Welcome to my personal website (WIP)!
+# Welcome to my personal website (WIP)!
 I am Daraus Zhang and I designed an interactive website that resembles my room to display my hobbies, skills, projects. Feel free to interact with whatever you see on screen!
