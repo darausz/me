@@ -48,7 +48,6 @@ export default function Card({ project, front, back }) {
       </div>
       :
       <div className={`project ${floatIn} ${back} ${cardBack} bg-red-300`} style={{"pointer-events": `${disabled ? "none" : "auto"}`}} onMouseEnter={() => { swap() }}>
-        {project.back}
       </div>
   )
 }

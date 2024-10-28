@@ -38,22 +38,23 @@ export default function Bookshelf() {
     //   let element = document.getElementById('0')
     //   console.log(element.scrollHeight, element.clientHeight)
     // }
-    
+    document.getElementById('top').scrollIntoView()
     // document.getElementById('0').addEventListener("scroll", isOverflown)
-    document.getElementById('0').scrollIntoView()
+    // console.log("scrolling")
+    // window.scrollTo(0,0)
   }, [])
 
   return (
     <div>
       <Back navigate={"/"}/>
-      <div id="0" className="bookshelf bookshelfContents">
+      <div className="bookshelf bookshelfContents">
         <div className="row bookshelfTop">
           <img src={bookshelfLeft}></img>
-          <div className="bookshelfCover" >
+          <div id="top" className="bookshelfCover" >
           </div>
           <img className="bookshelfCorner" src={bookshelfCorner}></img>
         </div>
-        <div id="0" className="bookshelfFront">
+        <div className="bookshelfFront">
           <div className="bookshelfRows">
             <section className="row relative">
               <img src={bookshelfRow}></img>
