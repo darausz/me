@@ -172,6 +172,12 @@
   justify-content: center;
 }
 
+.logo {
+  width: 4rem;
+  margin: auto;
+  padding-bottom: 5rem;
+}
+
 .preview {
   width: 20rem;
   margin: 0 auto 0 auto;

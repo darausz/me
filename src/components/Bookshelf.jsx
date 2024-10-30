@@ -48,7 +48,7 @@ export default function Bookshelf() {
     <div>
       <Back navigate={"/"}/>
       <div className="bookshelf bookshelfContents">
-        <div className="row bookshelfTop">
+        <div className="bookshelfTop">
           <img src={bookshelfLeft}></img>
           <div id="top" className="bookshelfCover" >
           </div>
