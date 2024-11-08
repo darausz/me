@@ -7,46 +7,57 @@ import bookshelfCorner from "../assets/bookshelfCorner.png"
 import bookshelfLeft from "../assets/bookshelfLeft.png"
 import bookshelfRow from "../assets/bookshelfRow.png"
 import sanderson from "../assets/sanderson.png"
-import sekiro from "../assets/sekiro.png"
+import sekiro from "../assets/sekiro.png"  
 import skills from "../assets/skills.png"
+import contacts from "../assets/contacts.png"
+import contactPage from "../assets/contactPage.png"
+import phoneIcon from "../assets/phoneIcon.png"
+import emailIcon from "../assets/emailIcon.png"
+import linkedInIcon from "../assets/linkedInIcon.png"
+import gitHubIcon from "../assets/gitHubIcon.png"
+import aboutMe from "../assets/aboutMe.png"
+import me from "../assets/me.png"
 
 export default function Bookshelf() {
-  const[hidden, setHidden] = ("")
-  // const [scrollPos, setScrollPos] = useState(window.scrollY)
-  // const [currentShelf, setCurrentShelf] = useState(0)
-  // const prevScrollPos = useRef(0)
-  // const shelves = useRef([])
-
-  // useEffect(() => {
-  //   console.log(document.getElementById('0').scrollTop)
-  // },[document.getElementById('0').scrollTop])
+  const[contact, setContact] = useState(false)
+  const[about, setAbout] = useState(false)
 
   useEffect(() => {
-    // function change( string ) {
-    //   setHidden(string)
-    // }
-    // window.addEventListener("scroll", () => {
-    //   console.log(document.getElementById('0').scrollTop)
-    //   if (document.getElementById('0').scrollTop != 0) {
-    //     change("true")
-    //   }
-    //   else {
-    //     change("")
-    //   }
-    // })
-    // function isOverflown() {
-    //   let element = document.getElementById('0')
-    //   console.log(element.scrollHeight, element.clientHeight)
-    // }
     document.getElementById('top').scrollIntoView()
-    // document.getElementById('0').addEventListener("scroll", isOverflown)
-    // console.log("scrolling")
-    // window.scrollTo(0,0)
   }, [])
 
   return (
     <div>
       <Back navigate={"/"}/>
+      <div className="relative z-40" style={{visibility: `${contact ? "visible" : "hidden"}`}}>
+        <div className="overlay absolute w-screen h-screen overflow-hidden" onMouseDown={() => setContact(false)}>
+          <img className="fixed center top-10 w-1/2" src={contactPage} style={{cursor: "auto"}} onMouseDown={(e) => e.stopPropagation()}></img>
+          <div className="absolute center top-32 handwriting" style={{cursor: "auto"}} onMouseDown={(e) => e.stopPropagation()}>
+          <div>
+            <img className="contactIcon" src={phoneIcon}></img>7184149581
+          </div>
+          <div>
+          <img className="contactIcon" src={emailIcon}></img>darauszhang@gmail.com
+          </div>
+          <div>
+          <img className="contactIcon" src={linkedInIcon}></img>linkedin.com/in/daraus-zhang/
+          </div>
+          <div>
+          <img className="contactIcon" src={gitHubIcon}></img>github.com/darausz
+          </div>
+        </div>
+        </div>
+      </div>
+      <div className="relative z-40" style={{visibility: `${about ? "visible" : "hidden"}`}}>
+        <div className="overlay absolute w-screen h-screen overflow-hidden" onMouseDown={() => setAbout(false)}>
+          <img className="absolute center w-1/2" src={aboutMe} style={{cursor: "auto"}} onMouseDown={(e) => e.stopPropagation()}></img>
+          <div className="absolute aboutMe handwriting"  style={{cursor: "auto"}} onMouseDown={(e) => e.stopPropagation()}>
+          <div className="w-3/4 about">
+            Daraus Zhang <br/> I am a web developer! I want to break into game development or software engineering. My personal website is inspired by old internet games. Feel free to look around! Check out my computer for my projects and my bookshelf for my skills, contact information, and interests.
+          </div>
+        </div>
+        </div>
+      </div>
       <div className="bookshelf bookshelfContents">
         <div className="bookshelfTop">
           <img src={bookshelfLeft}></img>
@@ -58,8 +69,8 @@ export default function Bookshelf() {
           <div className="bookshelfRows">
             <section className="row relative">
               <img src={bookshelfRow}></img>
-              <img src={sanderson} className="absolute left-20 bottom-20"></img>
-              <img src={sekiro} className="absolute sekiro bottom-20"></img>
+              <img src={me} className="absolute left-32 bottom-36 highlight" style={{cursor: "pointer"}} onClick={() => setAbout(true)}></img>
+              <img src={sanderson} className="absolute left-1/3 bottom-20"></img>
               <div className="bookshelfSegment"></div>
             </section>
             <section className="row relative">
@@ -67,8 +78,10 @@ export default function Bookshelf() {
               <img src={skills} className="absolute left-20 bottom-20"></img>
               <div className="bookshelfSegment"></div>
             </section>
-            <section className="row ">
+            <section className="row relative">
               <img src={bookshelfRow}></img>
+              <img src={contacts} className="absolute left-1/2 bottom-28 highlight" style={{cursor: "pointer"}} onClick={() => setContact(true)}></img>
+              <img src={sekiro} className="absolute left-32 bottom-32"></img>
               <div className="bookshelfSegment"></div>
             </section>
             {/* <section className="row w-full h-screen bg-green-400">shelf 2</section>
@@ -76,8 +89,8 @@ export default function Bookshelf() {
           </div>
           <div className="bookshelfSide"><img src={bookshelfSide}></img></div>
         </div>
-        
       </div>
+      
     </div>
 
   )

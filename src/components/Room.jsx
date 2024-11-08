@@ -1,7 +1,7 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import Light from "./Light";
-import shelf1 from "../assets/Shelf1.png";
+import shelf from "../assets/shelf.png";
 // import lightOn from "../assets/LightOn.png"
 // import lightOff from "../assets/LightOff.png"
 import bookshelf from "../assets/Bookshelf.png"
@@ -20,18 +20,18 @@ export default function Room() {
         <img src={background}></img>
       </div>
       <Light />
-      <div className='display absolute left-1/2 top-1/4'>
-        <div className='item bold text-4xl'>Daraus Zhang</div>
+      <div className='flex flex-col mx-auto absolute left-1/2 top-1/4'>
+        <div className='blockLetters'>&nbsp;DARAUS ZHANG</div>
         {/* <div className='shelf bg-amber-800 w-64 h-3'></div> */}
         <div className='wallShelf'>
-          <img src={shelf1}></img>
+          <img src={shelf}></img>
         </div>
       </div>
       {/* <div className="absolute left-1/2 bottom-1/2">ADD DIPLOMA HERE</div> */}
-      <div className="absolute left-20 bottom-12 w-96">
+      <div className="bookcase">
         <img className="highlight" src={bookshelf} style={{ cursor: 'pointer' }} onClick={() => {nav("/bookshelf")}}></img>
       </div>
-      <div className="setup absolute right-32 bottom-5">
+      <div className="setup">
         <img className="highlight" src={setup} onClick={() => {nav("/projects")}}></img>
       </div>
     </div>

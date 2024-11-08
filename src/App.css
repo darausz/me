@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Caveat";
+  src: local("Caveat"), url("./fonts/caveat.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Letters";
+  src: local("Letters"), url("./fonts/lettersFont.TTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VTKS";
+  src: local("VTKS"), url("./fonts/vtks.TTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
 #root {
   margin: 0 auto;
   height: 100vh;
@@ -10,6 +31,18 @@
 .darkmode {
   background-color: #cdbad1;
   filter: brightness(25%);
+}
+
+.blockLetters {
+  display: absolute;
+  z-index: 1;
+  display: inline;
+  /* font-family: "VTKS"; */
+  font-size:  2.2rem;
+  vertical-align: bottom;
+  line-height: 1.1rem;
+  color: rgb(42, 42, 112);
+  text-shadow: 2px -2px rgb(15, 15, 58), 1px -1px rgb(15, 15, 58);
 }
 
 .intro {
@@ -41,6 +74,13 @@
   flex-direction: column;
 }
 
+.bookcase {
+  position: absolute;
+  left: 5%;
+  bottom: 15px;
+  max-width: 25%;
+}
+
 .bookshelfTop {
   display: flex;
 }
@@ -67,10 +107,6 @@
 
 .bookshelfRows {
   flex-grow: 1;
-}
-
-.sekiro {
-  left: 60%;
 }
 
 ::-webkit-scrollbar {
@@ -112,16 +148,11 @@
 }
 
 .setup {
-  width: 40rem;
+  position: absolute;
+  right: 5%;
+  bottom: 5px;
+  max-width: 35%;
   cursor: pointer;
-}
-
-.about {
-  color: black;
-  font-size: 2rem;
-  position: relative;
-  will-change: transform;
-  animation: 1.5s 0s 1 slideIn;
 }
 
 .highlight:hover {
@@ -208,6 +239,7 @@
   text-align: left;
   white-space: pre-line;
   flex-grow: 1;
+  color: rgb(22, 22, 22);
 }
 
 .share-buttons {
@@ -290,4 +322,31 @@
     transform: translateY(0px);
     filter: opacity(100%);
   }
+}
+
+.overlay {
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+}
+
+.handwriting {
+  font-family: "Caveat";
+  font-size: 2vw;
+}
+
+.contactIcon {
+  width: 20%;
+}
+.center {
+  display: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.aboutMe {
+  display: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-40%, 30%);
 }
