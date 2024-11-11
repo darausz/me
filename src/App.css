@@ -87,7 +87,7 @@
 
 .bookshelfCover {
   flex-grow: 1;
-  background-image: url("/bookshelfTop.png");
+  background-image: url("./assets/bookshelfTop.png");
 }
 
 .bookshelfCorner {
@@ -131,7 +131,7 @@
 
 .bookshelfSegment {
   flex-grow: 1;
-  background-image: url("/bookshelfSegment.png");
+  background-image: url("./assets/bookshelfSegment.png");
   background-repeat: no-repeat;
 }
 
@@ -156,12 +156,12 @@
 }
 
 .highlight:hover {
-  -webkit-filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
-  filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+  -webkit-filter: drop-shadow(1px 0px 0 white) drop-shadow(0px 1px 0 white) drop-shadow(-1px -0px 0 white) drop-shadow(-0px -1px 0 white) drop-shadow(1px 0px 0 black) drop-shadow(0px 1px 0 black) drop-shadow(-1px -0px 0 black) drop-shadow(-0px -1px 0 black);
+  filter: drop-shadow(1px 0px 0 white) drop-shadow(0px 1px 0 white) drop-shadow(-1px -0px 0 white) drop-shadow(-0px -1px 0 white) drop-shadow(1px 0px 0 black) drop-shadow(0px 1px 0 black) drop-shadow(-1px -0px 0 black) drop-shadow(-0px -1px 0 black);
 }
 
 .monitor {
-  background-image: url("/Screen.png");
+  background-image: url("./assets/Screen.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -263,27 +263,27 @@
 }
 
 .valoBack {
-  background-image: url("/Valorant Back.png");
+  background-image: url("./assets/Valorant Back.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .valoFront {
-  background-image: url("/Valorant Front.png");
+  background-image: url("./assets/Valorant Front.png");
   background-repeat: no-repeat;
   background-size: contain;
   /* animation: flipOver .5s forwards; */
 }
 
 .ctgFront {
-  background-image: url("/CTG Front.png");
+  background-image: url("./assets/CTG Front.png");
   background-repeat: no-repeat;
   background-size: contain;
   /* animation: flipOver .5s forwards; */
 }
 
 .cfFront {
-  background-image: url("/CF Front.png");
+  background-image: url("./assets/CF Front.png");
   background-repeat: no-repeat;
   background-size: contain;
 }

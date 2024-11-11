@@ -5,7 +5,6 @@ import shelf from "../assets/shelf.png";
 // import lightOn from "../assets/LightOn.png"
 // import lightOff from "../assets/LightOff.png"
 import bookshelf from "../assets/Bookshelf.png"
-import floor from "../assets/Floor.png"
 import background from "../assets/Background.png"
 import setup from "../assets/Setup.png"
 import { useState } from "react";
