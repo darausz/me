@@ -28,7 +28,7 @@ export default function Room() {
       </div>
       {/* <div className="absolute left-1/2 bottom-1/2">ADD DIPLOMA HERE</div> */}
       <div className="bookcase">
-        <img className="highlight" src={bookshelf} style={{ cursor: 'pointer' }} onClick={() => {nav("/bookshelf")}}></img>
+        <img className="highlight overflow-hidden" src={bookshelf} style={{ cursor: 'pointer' }} onClick={() => {nav("/bookshelf")}}></img>
       </div>
       <div className="setup">
         <img className="highlight" src={setup} onClick={() => {nav("/projects")}}></img>

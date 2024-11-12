@@ -3,6 +3,7 @@ import { useState, useEffect} from "react"
 import Back from "./Back.jsx"
 import bookshelfSide from "../assets/bookshelfSide.png"
 import bookshelfCorner from "../assets/bookshelfCorner.png"
+import bookshelfTop from "../assets/bookshelfTop.png"
 import bookshelfLeft from "../assets/bookshelfLeft.png"
 import bookshelfRow from "../assets/bookshelfRow.png"
 import sanderson from "../assets/sanderson.png"
@@ -61,6 +62,7 @@ export default function Bookshelf() {
         <div className="bookshelfTop">
           <img src={bookshelfLeft} className="bookshelfLeft"></img>
           <div id="top" className="bookshelfCover" >
+            <img src={bookshelfTop}></img>
           </div>
           <img className="bookshelfCorner" src={bookshelfCorner}></img>
         </div>
