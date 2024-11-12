@@ -54,7 +54,7 @@ export default function Monitor() {
 
       <div className="relative">
         <div className="highlight mx-auto deck" style={{ cursor: 'pointer' }} onClick={() => setRevealed(true)}>
-          <img src={cards} className="cards"></img>
+          <img src={cards} className="cards mx-auto"></img>
         </div>
       </div>
   )
