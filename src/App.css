@@ -88,6 +88,7 @@
 
 .bookshelfTop {
   display: flex;
+  width: 100%;
 }
 
 .bookshelfLeft {
@@ -99,6 +100,9 @@
   background-image: url("./assets/bookshelfTop.png");
   background-size: cover no-repeat;
 } */
+ .bookshelfCover {
+  flex-grow: 1;
+ }
 .bookshelfCover img {
   height: 100%;
   object-fit: cover;
