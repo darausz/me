@@ -1,4 +1,5 @@
 import { useState } from "react"
+import monitor from "../assets/Monitor.png"
 import ctgcompostpreview from "../assets/CTGCompostFinderPreview.jpg"
 import ctgshopifypreview from "../assets/CTGShopifyPreview.jpg"
 import cards from "../assets/cards.png"
@@ -11,9 +12,8 @@ export default function Monitor() {
 
   return (
     revealed ?
-      <div className="monitor flex flex-wrap m-auto text-center justify-center bg-black gap-8">
+      <div className="monitor flex flex-wrap m-auto text-center justify-center">
         {/* <div className="w-3/4 bg-white mt-12" ></div> */}
-        <h1 className="w-full pt-8"></h1>
         <Card project={
           {
             back: "CTG Logo",
@@ -51,9 +51,10 @@ export default function Monitor() {
         />
       </div>
       :
-      <div className="monitor flex flex-wrap m-auto text-center justify-center bg-black gap-8">
-        <div className="highlight mx-auto pt-6" style={{ cursor: 'pointer' }} onClick={() => setRevealed(true)}>
-          <img src={cards}></img>
+
+      <div className="relative">
+        <div className="highlight mx-auto deck" style={{ cursor: 'pointer' }} onClick={() => setRevealed(true)}>
+          <img src={cards} className="cards"></img>
         </div>
       </div>
   )

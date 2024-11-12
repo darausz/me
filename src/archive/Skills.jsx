@@ -1,4 +1,4 @@
-import Back from "./Back"
+import Back from "../components/Back"
 import bookshelfExpanded from "../assets/BookshelfExpanded.png"
 
 export default function Skills() {

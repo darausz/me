@@ -1,7 +1,6 @@
 // import useDetectScroll from "@smakss/react-scroll-direction"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect} from "react"
 import Back from "./Back.jsx"
-import bookshelfTop from "../assets/bookshelfTop.png"
 import bookshelfSide from "../assets/bookshelfSide.png"
 import bookshelfCorner from "../assets/bookshelfCorner.png"
 import bookshelfLeft from "../assets/bookshelfLeft.png"
@@ -60,7 +59,7 @@ export default function Bookshelf() {
       </div>
       <div className="bookshelf bookshelfContents">
         <div className="bookshelfTop">
-          <img src={bookshelfLeft}></img>
+          <img src={bookshelfLeft} className="bookshelfLeft"></img>
           <div id="top" className="bookshelfCover" >
           </div>
           <img className="bookshelfCorner" src={bookshelfCorner}></img>
@@ -69,19 +68,19 @@ export default function Bookshelf() {
           <div className="bookshelfRows">
             <section className="row relative">
               <img src={bookshelfRow}></img>
-              <img src={me} className="absolute left-32 bottom-36 highlight" style={{cursor: "pointer"}} onClick={() => setAbout(true)}></img>
-              <img src={sanderson} className="absolute left-1/3 bottom-20"></img>
+              <img src={me} className="book highlight" style={{cursor: "pointer"}} onClick={() => setAbout(true)}></img>
+              <img src={sanderson} className="books absolute left-1/3"></img>
               <div className="bookshelfSegment"></div>
             </section>
             <section className="row relative">
               <img src={bookshelfRow}></img>
-              <img src={skills} className="absolute left-20 bottom-20"></img>
+              <img src={skills} className="books absolute left-20"></img>
               <div className="bookshelfSegment"></div>
             </section>
             <section className="row relative">
               <img src={bookshelfRow}></img>
-              <img src={contacts} className="absolute left-1/2 bottom-28 highlight" style={{cursor: "pointer"}} onClick={() => setContact(true)}></img>
-              <img src={sekiro} className="absolute left-32 bottom-32"></img>
+              <img src={contacts} className="book contact highlight" style={{cursor: "pointer"}} onClick={() => setContact(true)}></img>
+              <img src={sekiro} className="book"></img>
               <div className="bookshelfSegment"></div>
             </section>
             {/* <section className="row w-full h-screen bg-green-400">shelf 2</section>

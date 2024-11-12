@@ -19,7 +19,7 @@ export default function Room() {
         <img src={background}></img>
       </div>
       <Light />
-      <div className='flex flex-col mx-auto absolute left-1/2 top-1/4'>
+      <div className='name flex flex-col mx-auto absolute left-1/2 top-1/4'>
         <div className='blockLetters'>&nbsp;DARAUS ZHANG</div>
         {/* <div className='shelf bg-amber-800 w-64 h-3'></div> */}
         <div className='wallShelf'>

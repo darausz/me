@@ -29,11 +29,11 @@ export default function Light() {
 
   return (
     darkMode ? 
-    <div className='h-32 absolute left-1/4 top-0'>
+    <div className='light h-28 absolute left-1/4 top-0'>
       <img className="highlight" src={lightOff} style={{ cursor: 'pointer' }} onClick={toggleDarkMode}></img>
     </div>
     :
-    <div className='h-32 absolute left-1/4 top-0'>
+    <div className='light h-10 absolute left-1/4 top-0'>
       <img className="highlight" src={lightOn} style={{ cursor: 'pointer' }} onClick={toggleDarkMode}></img>
     </div>
   )
