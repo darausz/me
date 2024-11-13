@@ -23,6 +23,19 @@
   font-style: normal;
 }
 
+@media screen and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
 #root {
   margin: 0 auto;
   height: 100vh;
