@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Room />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/bookshelf" element={<Bookshelf />} />
-        <Route path="/test" element={<Bookshelf />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </HashRouter>
   </StrictMode>,
