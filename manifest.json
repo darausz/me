@@ -1,4 +1,12 @@
 {
+  "name": "me",
+  "start_url": "/",
+  "lang": "en-US",
   "display": "standalone",
-  "orientation": "landscape"
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "/logo.png"
+    }
+  ]
 }
