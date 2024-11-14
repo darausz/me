@@ -101,7 +101,7 @@
 }
 
 .bookcase {
-  position: fixed;
+  position: absolute;
   left: 5%;
   bottom: 15px;
   max-width: 25%;
