@@ -2,30 +2,7 @@ import { useState, useEffect } from "react";
 import lightOn from "../assets/LightOn.png"
 import lightOff from "../assets/LightOff.png"
 
-export default function Light() {
-  const [darkMode, setDarkMode] = useState(false)
-
-  useEffect (() => {
-    if (!darkMode && document.body.style.backgroundColor == "rgb(205, 186, 209)") {
-      toggleDarkMode()
-    }
-  },[])
-
-  function toggleDarkMode() {
-    const styling = document.body.style
-    if (darkMode) {
-      setDarkMode(false)
-      styling.backgroundColor = "#f1dcf5"
-      styling.filter = "brightness(100%)"
-      // document.body.classList.remove('darkmode')
-    }
-    else {
-      setDarkMode(true)
-      styling.backgroundColor = "#cdbad1"
-      styling.filter = "brightness(25%)"
-      // document.body.classList.add('darkmode')
-    }
-  }
+export default function Light({darkMode, toggleDarkMode}) {
 
   return (
     darkMode ? 
